@@ -15,7 +15,7 @@ document.addEventListener("scroll", () => {
 // Loading page redirecting script
 if (performance.getEntriesByType("navigation")[0].type === "reload") {
   // Redirect to another page
-  window.location.href = "loder.html";
+  window.location.href = "index.html";
 }
 
 // Add event listeners for dropdown hover
