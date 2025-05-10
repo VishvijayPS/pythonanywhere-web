@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Services Contact Form</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="loder.html">Energy Services</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-form-container">
+        <div class="form-header">
+            <h1>Contact Form</h1>
+            <p>Get in touch with us for all your energy service needs</p>
+        </div>
+
+        <form class="tesla-form" id="contactForm">
+            <div class="form-section">
+                <h2>Select Services</h2>
+                <div class="services-checkbox-container">
+                    <!-- Wind Energy Services -->
+                    <fieldset class="service-group">
+                        <legend>Wind Energy Services</legend>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Feasibility studies and site assessment">
+                            Feasibility studies and site assessment
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Wind Resource Assessment">
+                            Wind Resource Assessment (New Site Identification till Site Suitability)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Project Development and Management">
+                            Project Development and Management
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Power Performance testing">
+                            Power Performance testing
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Technical Due Diligence">
+                            Technical Due Diligence (LTA, LTSA, TSA)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Financial Analysis & Risk Management">
+                            Financial Analysis & Risk Management (LCOE)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Operational optimization">
+                            Operational optimization & performance analysis
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Repowering & Life time extension">
+                            Repowering & Life time extension services
+                        </label>
+                    </fieldset>
+                    
+                    <!-- Solar Energy Services -->
+                    <fieldset class="service-group">
+                        <legend>Solar Energy Services</legend>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Solar Resource Assessment">
+                            Solar Resource Assessment
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Solar Operational optimization">
+                            Operational optimization & performance analysis
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Performance testing">
+                            Performance testing
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Solar Technical Due Diligence">
+                            Technical Due Diligence
+                        </label>
+                    </fieldset>
+                    
+                    <!-- BESS Services -->
+                    <fieldset class="service-group">
+                        <legend>BESS Services</legend>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="services" value="Hybrid & Energy Storage Solutions">
+                            Hybrid & Energy Storage Solutions
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>User Details</h2>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                
+                <div class="input-group full-width">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+    </main>
+
+    <script src="../static/js/from.js"></script>
+    <script>
+              // Apply the saved theme on page load
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        // Save the current mode in localStorage
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      }
+    </script>
+</body>
+</html>
