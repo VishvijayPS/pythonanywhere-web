@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/loader.css">
+    <title>Vayumithra loading</title>
+  </head>
+  <body>
+    <div class="model">
+      <model-viewer
+        class="lod_model"
+        alt="Wind turbine"
+        src="static/model/lod_wind-terbine.glb"
+        autoplay
+        camera-orbit="-60deg 90deg"
+        shadow-intensity="3"
+        loading="eager"
+      ></model-viewer>
+      <img src="static/image/ground.png" alt="ground" class="ground" />
+    </div>
+
+    <div class="load">
+      <span>L</span>
+      <span>O</span>
+      <span>A</span>
+      <span>D</span>
+      <span>I</span>
+      <span>N</span>
+      <span>G</span>
+    </div>
+
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+    <script src="static/js/loader.js"></script>
+  </body>
+</html>
